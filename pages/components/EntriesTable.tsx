@@ -27,7 +27,7 @@ function EntryItem({entry}: { entry: Entry }) {
     </tr>;
 }
 
-const EntryTable = ({entries}) => {
+const EntryTable = ({entries}: { entries: Entry[] }) => {
     return <table className={styles.table}>
         <thead>
         <tr>
@@ -42,7 +42,7 @@ const EntryTable = ({entries}) => {
         </thead>
         <tbody>
         {entries.map((entry: Entry) => <EntryItem key={entry.date}
-                                                       entry={entry}/>)}
+                                                  entry={entry}/>)}
         </tbody>
     </table>
 }
